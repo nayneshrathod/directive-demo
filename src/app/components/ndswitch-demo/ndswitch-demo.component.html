@@ -1,0 +1,55 @@
+<p>ngswitch-demo works!</p>
+<hr>
+<button class="btn btn-primary mx-2" (click)="setChoice(1)">button 1</button>
+<button class="btn btn-primary mx-2" (click)="setChoice(2)">button 2</button>
+<button class="btn btn-primary mx-2" (click)="setChoice(3)">button 3</button>
+<button class="btn btn-primary mx-2" (click)="setChoice(4)">button 4</button>
+<button class="btn btn-danger mx-2" (click)="setChoice(0)">Default</button>
+
+<div [ngSwitch]="choice">
+    <div *ngSwitchCase="1">
+        <div class="row">
+            <div class="col-md-4">
+                <img src="/assets/Imgaes/nayne<sh.png" [ngStyle]="{'height.px': 200}" alt="">
+            </div>
+            <div class="col-md-8">
+                <h1>This is headibg {{choice}}</h1>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt pariatur explicabo aut ab nesciunt illum id quisquam nemo dolores quis repellendus ipsa voluptas beatae, similique, quidem neque voluptatem debitis veritatis?</p>
+            </div>
+        </div>
+    </div>
+    <div *ngSwitchCase="2">
+        <div class="row">
+            <div class="col-md-4">
+                <img src="/assets/Imgaes/raghunath.png" [ngStyle]="{'height.px': 200}" alt="">
+            </div>
+            <div class="col-md-8">
+                <h1>This is headibg {{choice}}</h1>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt pariatur explicabo aut ab nesciunt illum id quisquam nemo dolores quis repellendus ipsa voluptas beatae, similique, quidem neque voluptatem debitis veritatis?</p>
+            </div>
+        </div>
+    </div>
+    <div *ngSwitchCase="3">
+        <div class="row">
+            <div class="col-md-4">
+                <img src="/assets/Imgaes/swati.png" [ngStyle]="{'height.px': 200}" alt="">
+            </div>
+            <div class="col-md-8">
+                <h1>This is headibg {{choice}}</h1>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt pariatur explicabo aut ab nesciunt illum id quisquam nemo dolores quis repellendus ipsa voluptas beatae, similique, quidem neque voluptatem debitis veritatis?</p>
+            </div>
+        </div>
+    </div>
+    <div *ngSwitchCase="4">
+        <div class="row">
+            <div class="col-md-4">
+                <img src="/assets/Imgaes/khumesh.jpg" [ngStyle]="{'height.px': 200}" alt="">
+            </div>
+            <div class="col-md-8">
+                <h1>This is headibg {{choice}}</h1>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt pariatur explicabo aut ab nesciunt illum id quisquam nemo dolores quis repellendus ipsa voluptas beatae, similique, quidem neque voluptatem debitis veritatis?</p>
+            </div>
+        </div>
+    </div>
+    <div *ngSwitchDefault>This is a default</div>
+</div>

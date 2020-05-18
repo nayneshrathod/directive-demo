@@ -1,0 +1,13 @@
+<div class="container">
+    <h3 *ngIf="people.length>0">There are {{people.length}} Conacts</h3>
+    <h3 *ngIf="people.length===0">There are NO Conacts Please <button class="btn btn-link" (click)="ngOnInit()">Load Data</button>
+    </h3>
+    <ul>
+        <!-- <li *ngFor=" let p of people" [ngClass]="{'text-success': p.age>=21, 'text-danger': p.age<21}"> -->
+        <li *ngFor=" let p of people; index as i" [ngClass]="getCssClass(p.age)">
+            <img [src]="p.picture" [ngStyle]="imgStyles" alt="{{p.name}}">
+            {{p.name}} is from {{p.city}} and age is {{p.age}}
+            <button class="btn btn-warning" (click)="deletePerson(i)">X</button>
+        </li>
+    </ul>
+</div>
